@@ -1,0 +1,13 @@
+image: ldap
+org: xamoc
+arches:
+  - amd64
+network: yes
+disable-content-trust: yes
+config:
+  capabilities:
+   - CAP_NET_BIND_SERVICE
+   - CAP_CHOWN
+   - CAP_SETUID
+   - CAP_SETGID
+   - CAP_DAC_OVERRIDE

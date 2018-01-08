@@ -1,0 +1,14 @@
+{
+  "ldap_suffix": {
+    "content": "dc=wynnlin,dc=lab",
+    "perm": "0644"
+  },
+  "ldap_rootpass": {
+    "content": "totolitoto",
+    "perm": "0644"
+  },
+  "ldap_organisation": {
+    "content": "Wynnlin Lab",
+    "perm": "0644"
+  }
+}
