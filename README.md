@@ -1,7 +1,8 @@
 # demo-linuxkit-infrakit
 
 Simple playground for linuxkit and infrakit study.
-Final goal is to deploy a software forge:
+
+Final goal is to deploy a software forge on Openstack:
 
 * 1 LDAP appliance
 * 1 gitea appliance
