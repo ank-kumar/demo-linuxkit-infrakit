@@ -2,6 +2,7 @@ image: ldap
 org: xamoc
 arches:
   - amd64
+gitrepo: https://github.com/aolwas/demo-linuxkit-infrakit.git
 network: yes
 disable-content-trust: yes
 config:
