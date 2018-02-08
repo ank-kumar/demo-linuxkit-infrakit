@@ -47,8 +47,8 @@ file_env() {
 
 # replace variables in slapd.conf
 SLAPD_CONF="/etc/openldap/slapd.conf"
-file_env 'ROOT_USER'
-file_env 'SUFFIX'
+file_env 'ROOT_USER' 'admin'
+file_env 'SUFFIX' 'dc=example,dc=org'
 # sed -i "s~%CA_FILE%~$CA_FILE~g" "$SLAPD_CONF"
 # sed -i "s~%CERT_KEY%~$CERT_KEY~g" "$SLAPD_CONF"
 # sed -i "s~%CERT_FILE%~$CERT_FILE~g" "$SLAPD_CONF"
@@ -56,14 +56,13 @@ sed -i "s~%ROOT_USER%~$ROOT_USER~g" "$SLAPD_CONF"
 sed -i "s~%SUFFIX%~$SUFFIX~g" "$SLAPD_CONF"
 
 # encrypt root password before replacing
-file_env 'ROOT_PW'
-if [ -z "$ROOT_PW" ]; then ROOT_PW="password"; fi
+file_env 'ROOT_PW' 'password'
 ROOT_PW=$(slappasswd -s "$ROOT_PW")
 sed -i "s~%ROOT_PW%~$ROOT_PW~g" "$SLAPD_CONF"
 
 # replace variables in organisation configuration
 ORG_CONF="/etc/openldap/organisation.ldif"
-file_env 'ORGANISATION_NAME'
+file_env 'ORGANISATION_NAME' 'Example.org (c)'
 sed -i "s~%SUFFIX%~$SUFFIX~g" "$ORG_CONF"
 sed -i "s~%ORGANISATION_NAME%~$ORGANISATION_NAME~g" "$ORG_CONF"
 
