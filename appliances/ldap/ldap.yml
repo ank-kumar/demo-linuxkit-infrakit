@@ -39,9 +39,8 @@ services:
      - /sys:/sys
      - /var/config/ssh/authorized_keys:/root/.ssh/authorized_keys
   - name: slapd
-    image: xamoc/ldap:latest-amd64
+    image: xamoc/ldap:787611a6c4209b723ee31b65753800115d1a0a5c-amd64
     env:
-     - ROOT_USER=admin
      - SUFFIX_FILE=/var/config/ldap_suffix
      - ORGANISATION_NAME_FILE=/var/config/ldap_organisation
      - ROOT_PW_FILE=/var/config/ldap_rootpass
