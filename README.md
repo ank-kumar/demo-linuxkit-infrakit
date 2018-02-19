@@ -25,8 +25,8 @@ definition and Dockerfile to build package image
   ```
 
 > **Note**
-> There is a potential error when pushing the final manifest. amd64 image is
-> still pushed and available on the dockerhub
+> On linux, be sure to not use any docker-credentials-helper since the
+> tool will look at the base64 encoded user/password in ~/.docker/config.json
 
 ldap package accepts following parameters (as env variables):
 

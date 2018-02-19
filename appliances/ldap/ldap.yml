@@ -39,7 +39,7 @@ services:
      - /sys:/sys
      - /var/config/ssh/authorized_keys:/root/.ssh/authorized_keys
   - name: slapd
-    image: xamoc/ldap:787611a6c4209b723ee31b65753800115d1a0a5c-amd64
+    image: xamoc/ldap:787611a6c4209b723ee31b65753800115d1a0a5c
     env:
      - SUFFIX_FILE=/var/config/ldap_suffix
      - ORGANISATION_NAME_FILE=/var/config/ldap_organisation
